@@ -1,0 +1,8 @@
+@import "./global.scss";
+
+.App{
+    background-color: $background1;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}

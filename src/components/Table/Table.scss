@@ -1,0 +1,11 @@
+@import "./../../global.scss";
+
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+
+}

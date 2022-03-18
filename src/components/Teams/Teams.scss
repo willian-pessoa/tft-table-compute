@@ -1,0 +1,48 @@
+@import "./../../global.scss";
+
+.Teams{
+    height: 100vh;
+    width: 100vw;
+    background-color: $background2;
+    position: absolute;
+    top: calc(30px - 100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease-in, right 0.5s ease-out;
+    overflow: hidden;
+    text-align: center;
+
+    .mainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .numberGames{
+            margin: 10px;
+        }
+    }
+
+    .teamsContainer{
+        display: flex;
+        align-items: center;
+
+        .divider{
+            margin: 10% 5px 60% 5px;
+        }
+    }
+
+    .arrows{
+        position: absolute;
+        bottom: -10px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+}
+
+.active{
+    top: 0;
+    overflow: hidden;
+    transition: top 0.5s ease-in, right 0.5s ease-out;
+}
