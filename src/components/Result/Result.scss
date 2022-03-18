@@ -1,1 +1,32 @@
 @import "./../../global.scss";
+
+.result{
+    height: 100vh;
+    width: 100vw;
+    background-color: $background2;
+    position: absolute;
+    top: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease-in, right 0.5s ease-out;
+    overflow: hidden;
+    text-align: center;
+
+    .btnResult{
+        cursor: pointer;
+        position: absolute;
+        top: 2px;
+
+        h3{
+            margin: 0;
+        }
+    }
+}
+
+.active{
+    top: 0;
+    overflow: hidden;
+    transition: top 0.5s ease-in, right 0.5s ease-out;
+}

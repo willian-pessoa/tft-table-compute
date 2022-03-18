@@ -7,17 +7,17 @@ export default function Team({ idTeam, team, setTeam, players, setPlayers, numbe
   const handleInputPlayer = (player, index) => {
     let tempArr = JSON.parse(JSON.stringify(players))
     tempArr[index].name = player;
-    tempArr[index].team = team;
+    tempArr[index].team = team.name;
     tempArr[index].pontuation = Array(numberOfGames).fill(0);
     setPlayers(tempArr);
   };
 
   const handleAdd = () =>{
-      setPlayers(prev=>[...prev, {name: "",team: team,pontuation:Array(numberOfGames).fill(0)}])
+      setPlayers(prev=>[...prev, {name: "",team: team.name,pontuation:Array(numberOfGames).fill(0)}])
   }
 
   const handleTeam = (nameTeam) =>{
-    setTeam(nameTeam)
+    setTeam({name:nameTeam, pontuation:0})
     let tempArr = JSON.parse(JSON.stringify(players))
     //console.log(tempArr)
     players.forEach((player,index)=>{
@@ -31,7 +31,7 @@ export default function Team({ idTeam, team, setTeam, players, setPlayers, numbe
       <h2>Team {idTeam}</h2>
       <input
         placeholder="Team Tag"
-        value={team}
+        value={team.name}
         onChange={(e) => handleTeam(e.target.value)}
       />
       <h3>Players</h3>

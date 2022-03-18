@@ -27,6 +27,10 @@ export default function Teams({
 
   const handleUpdate = () => {
     setIsActive((prev) => !prev);
+    localStorage.setItem("Team1", JSON.stringify(team1));
+    localStorage.setItem("Team2", JSON.stringify(team2));
+    localStorage.setItem("Players1", JSON.stringify(players1));
+    localStorage.setItem("Players2", JSON.stringify(players2));
   };
 
   const handleNumberGames = (amount) => {
